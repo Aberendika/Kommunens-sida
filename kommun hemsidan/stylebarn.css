@@ -1,0 +1,481 @@
+* {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+body {
+  margin-top: 60px; /* Assuming your header height is 60px */
+}
+
+.sv-fluid-grid.sv-grid-12.sv-layout.navigationpage__background-image-grid {
+  background-color: #fff;
+  background-size: cover; /* Adjust the sizing as needed */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Makes the background fixed while scrolling */
+}
+
+.navigationpage__subpages {
+  margin-top: 60px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0;
+}
+
+.navigationpage__subpages {
+  list-style: none;
+  padding: 0;
+}
+
+.navigationpage__subpage-wrapper {
+  /* Other properties */
+  min-height: 300px; /* Adjust the height as needed */
+  position: relative;
+  text-align: center; /* Center the text horizontally */
+}
+
+.sv-fluid-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container horizontally */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.navigationpage__subpage-wrapper:hover {
+  transform: translateY(-5px); /* Add a slight lift on hover */
+}
+
+.navigationpage__subpage-wrapper:hover .navigationpage__subpage-link {
+  color: #0056b3; /* Blue text color on hover */
+}
+
+.navigationpage__subpage-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.navigationpage__subpage-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.navigationpage__subpage-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.navigationpage__subpage-wrapper:hover .navigationpage__subpage-dropdown {
+  display: block;
+}
+
+.navigationpage__subpage-title {
+  font-weight: 700; /* Bold font weight */
+  font-size: 14px; /* Adjust the font size as needed */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; /* Full width */
+  background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+  padding: 10px; /* Adjust the padding as needed */
+  margin-bottom: 0;
+}
+
+.navigationpage__subpage-description {
+  font-weight: 500; /* Medium font weight */
+  font-size: 12px; /* Adjust the font size as needed */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; /* Full width */
+  background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+  padding: 10px; /* Adjust the padding as needed */
+  margin-bottom: 0;
+}
+
+/* Subpage backgrounds */
+.subpage-1 {
+  background-image: url('bilder/förskola.jpeg');
+}
+
+.subpage-2 {
+  background-image: url('bilder/grundskola.jpeg');
+}
+
+.subpage-3 {
+  background-image: url('bilder/gymnasie.jpeg');
+}
+
+.subpage-4 {
+  background-image: url('bilder/kultur.jpeg');
+}
+
+.subpage-5 {
+  background-image: url('bilder/yrkes.jpg');
+}
+
+.subpage-1,
+.subpage-2,
+.subpage-3,
+.subpage-4,
+.subpage-5 {
+  background-position: center center; /* Center the background image both horizontally and vertically */
+  background-size: cover; /* Scale the background image to cover the entire element */
+}
+
+#h1hem {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 40px;
+  font-weight: 400; /* Slightly bold font weight */
+}
+
+hr {
+  margin-top: 10px;
+  border: 2px solid #89CFF0;
+}
+
+/* Reset some default styles */
+body, ul {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.expand-icon {
+  font-size: 1.2em;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.submenu {
+  display: none;
+  padding-left: 20px; /* This indents the submenu items */
+}
+
+:root{
+  --menu-count: 7;
+}
+
+
+.mobile-menu-btn{
+  display: none;
+}
+
+.header-main{
+  width: 100%;
+  padding: 0 60px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+
+.header-main nav{
+  display: flex;
+
+}
+
+.header-main .logo{
+  height: 40px;
+  width: fit-content;
+  align-self: center;
+  cursor: pointer;
+}
+.header-main .logo img{
+  height: 100%;
+
+}
+.header-main ul{
+  height: 100%;
+  padding-left: 40px;
+  list-style: none;
+  display: flex;
+  align-self: center;
+}
+
+.header-main ul li{ 
+  position: relative;
+}
+
+
+.header-main ul li a{
+  display: block;
+  padding: 0 10px;
+  height: 100%;
+  line-height: 60px;
+  font-size: 1rem;
+  color: black;
+  background-color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease-in-out 100ms;
+}
+
+
+.header-main ul li a:hover{
+  background-color: #2a2a2a;
+  color: white;
+}
+
+
+/* DROPDOWN STYLE STARTAR HÄR */
+
+.header-main ul li ul{
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  left: -40px;
+  transition: all ease-in-out 100ms;
+}
+
+.header-main ul li ul li a{
+  white-space: nowrap;
+}
+
+ul li:hover>ul{
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+/* DROPDOWN SLUTAR HÄR */
+
+
+.header-main .sm{
+  height: 60px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.header-main .sm a{
+  display: block;
+  height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.header-main .sm img{
+  height: 100%;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px){
+
+  .header-main{ 
+      display: none;
+  }
+  .mobile-menu-btn{
+      display: flex;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 200;
+      background: white;
+  }
+  .mobile-menu-btn img{
+      height: 80%;
+      align-self: center;
+  }
+  .header-main{
+      height: 100vh;
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding: 0;
+      justify-content: flex-start;
+  }
+  .header-main nav{
+      width: 100%;
+      height: 80vh;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: stretch;
+  }
+  .header-main .logo{
+      height: 30%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+  }
+  
+  .header-main .logo img{
+      height: 60%;
+      align-self: center;
+  }
+  .header-main ul{
+      height: 70%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: space-between;
+  }
+
+  .header-main ul li{
+      width: 100%;
+      height: calc(100% / var(--menu-count));
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid #ddd;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: center;
+      transition: all ease-in-out 100ms;
+  }
+  .header-main ul li:nth-last-child(1) {
+      border-bottom: 1px solid #ddd;
+  }
+  .header-main ul li a{
+      width: 100%;
+      height: fit-content;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      font-size: 15px;
+  }
+  .header-main ul li a:hover {
+      background-color: transparent;
+      color: #111;
+  }
+  .header-main nav{
+      overflow-y: scroll;
+      overflow-x: hidden;
+  }
+  
+  .header-main ul li ul{
+      display: none;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2000;
+  }
+  .header-main ul li ul li{
+      height: fit-content;
+      display: block;
+      background-color: #111;
+  }
+  .header-main ul li ul li a{
+      background-color: #111;
+      color: white;
+  }
+  .header-main ul li ul li a:hover{
+      background-color: #111;
+      color: white;
+  }
+  
+  .header-main ul li:focus>ul,
+  .header-main ul li:hover>ul{
+      display: flex;
+      visibility: visible;
+      opacity: 1;
+  }
+  
+  .header-main .sm{
+      height: 20%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+  }
+
+  .header-main .sm a{
+      height: 60%;
+      margin: 0 2%;
+      padding: 0;
+  }
+
+}
+
+.your-main-content-class {
+  /* Replace with your main content's class or id */
+  margin-top: 60px; /* This should be the height of your header */
+}
+
+footer {
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 100%;
+  margin: 20px 0 0 0;
+  background-color: grey;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  flex-shrink: 0; /* Footer krymper inte */
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: 10px 0;
+  font-size: clamp(0.9375rem, 0.7023rem + 1.0753vw, 1.5625rem);
+}
+
+footer a:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.h3footer {
+  font-size: clamp(1.125rem, 0.8427rem + 1.2903vw, 1.875rem);
+  margin: 20px 0;
+}
+
+.footerlank {
+  margin-left: 3%;
+  margin-right: 2%; /* Added this to give some space to the right */
+}
+
+.footerkontakt {
+  margin: 0 5%; /* Changed from a fixed pixel value to a percentage */
+}
+
+.footerkontakt p {
+  margin: 10px 0;
+  font-size: clamp(0.9375rem, 0.7023rem + 1.0753vw, 1.5625rem);
+}
+
+@media (max-width: 800px) {
+  .footerkontakt {
+      margin: 0 0;
+  }
+}

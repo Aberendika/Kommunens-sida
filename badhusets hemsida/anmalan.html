@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @media (max-width: 768px){
+            .anmälan{
+                padding: 40px 10px;
+            }
+
+            .anmälan .title h2{
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Hem</a>
+            </li>
+            <li>
+                <a href="tider.html">Öppettider</a>
+            </li>
+    
+            <li>
+                <a href="priser.html">Priser</a>
+            </li>
+    
+            <li>
+                <a href="simskola.html">Simskola</a>
+            </li>
+    
+            <li>
+                <a href="kontakt.html">Kontakt</a>
+            </li>
+        </ul>
+    </nav>
+    </header>
+    
+    <article class="articleanmalan">
+        <h1 id="h1hem">
+            Aqua Park Badhus
+        </h1>
+        <hr>
+        <h1 class="rubrik"> 
+            Anmälningsformulär
+        </h1>
+    </article>
+    
+    <main class="anmalanmain">
+    <div class="anmälan">
+        <form action="" id="anmälningsformulär">
+
+           
+            <div class="form-group">
+                <label for="name">Namn</label>
+                <input type="text" name="name" id="name" class="formControl" placeholder="Aqua Park" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="email">E-postadress</label>
+                <input type="email" name="email" id="email" class="formControl" placeholder="Aquapark@gmail.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input type="number" name="phone" id="phone" class="formControl" placeholder="0700000010" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="address">Address <span class="clue"></span></label>
+                <input type="text" name="address" id="address" class="formControl" placeholder="Aqua Park Stockholm">
+            </div>
+            
+            <div class="form-group">
+                <p id="nivå">
+                    Kursnivå</p>
+                <label for="">
+                    <input type="radio" name="source" value="nivå1"
+                    class="inputRadio"
+                    checked> Nivå 1
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="nivå2"
+                    class="inputRadio"
+                    >Nivå 2 
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="nivå3"
+                    class="inputRadio"
+                    > Nivå 3
+                </label>
+                <label for="">
+                    <input type="radio" name="source" value="nivå4"
+                    class="inputRadio"
+                    > Nivå 4
+                </label>
+            </div>
+
+            
+
+            <div class="form-group">
+                <p id="nivå">Övrigt</p>
+                <textarea name="övrigt"  cols="30" rows="5"  id="övrigt" class="textarea" placeholder="..."></textarea>
+            </div>
+            <div class="inputBox">
+                        <input type="submit" value="Skicka">
+                    </div>
+        </form>
+    
+        
+    </div>
+    </main>
+
+    <footer class="footer">
+        <h3 class="h3footer">
+            Kontakta oss
+        </h3>
+        <p class="pfooter">
+            Email: Aquapark@gmail.com
+        </p>
+        <br>
+        <a href="tider.html" class="footertider">Tryck för att se öppettider</a>
+        <br>
+        <p class="pfooter">
+            Telefonnummer växel: 076-0000000
+        </p>
+        <p class="pfooter">
+            Besöksadress: Badhusgatan 1
+        </p>
+    </footer>
+    </body>
+</html>

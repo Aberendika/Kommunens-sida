@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulär</title>
+    <link rel="stylesheet" href="stylekult.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="mobile-menu-btn">
+        <img src="img/burger-bar.png" alt="mobile-menu-btn" onclick="openMenu()">
+    </div>
+
+    <header class="header-main">
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="we7 logo">
+            </a>
+            <ul>
+                <li>
+                    <a href="index.html">Hem</a>
+                </li>
+                <li>
+                    <a href="kultur.html">Fritid & Kultur</a>
+                    <ul>
+                        <li>
+                            <a href="leder.html">Vandringsleder</a>
+                        </li>
+
+                        <li>
+                            <a href="bibliotek.html">Bibliotek</a>
+                        </li>
+
+                        <li>
+                            <a href="idrott.html">Idrottsplatser</a>
+                        </li>
+
+                        <li>
+                            <a href="forening.html">Föreningsverksamheter</a>
+                        </li>
+
+                        <li>
+                            <a href="formularkultur.html">Hyra idrottsplats</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ledigajobbstart.html">Lediga Jobb</a>
+                </li>
+                <li>
+                    <a href="barn.html">Barn & Utbildning</a>
+                    <ul>
+                        <li>
+                            <a href="forskolor.html">Förskola och Pedagogisk Omsorg</a>
+                        </li>
+                        <li>
+                            <a href="grundskola.html">Grundskola och Fritidshem</a>
+                        </li>
+                        <li>
+                            <a href="gymnasium.html">Gymnasieskola</a>
+                        </li>
+                        <li>
+                            <a href="kulturskola.html">Kulturskola</a>
+                        </li>
+                        <li>
+                            <a href="yrkes.html">Yrkeshögskola</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="naringsliv.html">Näringsliv</a>
+                <ul>
+                    <li>
+                        <a href="info.html">Information om att starta företag</a>
+                    </li>
+                    <li>
+                        <a href="tillstand.html">Sök tillstånd</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="politik.html">Kommun & Politik</a>
+                <ul>
+                    <li>
+                        <a href="kommun.html">Förvaltningar</a>
+                    </li>
+                    <li>
+                        <a href="kontakt.html">Kontaktlistor till skolor och verksamheter</a>
+                    </li>
+                    <li>
+                        <a href="Kommunstyrelsen.html">Kommunstyrelsen</a>
+                    </li>
+                </ul>
+            </li>
+            </ul>
+        </nav>
+        <div class="sm">
+            <a href="/badhusets hemsida/index.html" target="_blank"><img src="img/swimming.png" alt="Aqua Parks link"></a>
+            <a href="/Fritidshem/index.html"><img src="img/game-pad.png" alt="Fritidshem link"></a>
+        </div>
+    </header>
+<script src="meny.js"></script>
+
+<main>
+    <article class="articleK">
+        <h1 id="h1hyra">
+            Hyra idrottsplats 
+        </h1>
+    </article>
+
+    <section>
+        <h2 id="h2hyra">
+            I We7 kommun har ni möjlighet att hyra våra idrottsplatser! I detta formuläret
+            kan ni välja vilken idrottsplats ni vill hyra. 
+        </h2>
+        <hr>
+
+        <form class="formularK">
+            <label>Föreningsnamn / Förnamn och efternamn *</label><br>
+            <input placeholder="Förnamn och efternam.."><br>
+            <label for="telnr">Telefonnummer *</label><br>
+            <input placeholder="Telefonnummer.."><br>
+            <label>Välj datum:</label><br>
+            <input type="date" id="datum" name="datum"> <br>
+            <label>Vilken idrottsplats vill du hyra? *</label><br>
+            <select>
+            <option>Välj en idrottsplats du ska hyra: *</option>
+            <option>Fotbollsplan</option>
+            <option>Tennisplan</option>
+            <option>Basketplan</option>
+            <option>Skateboard hall </option>
+            <option>Baseballsplan</option>
+            <option>Ballethall</option>
+        </select>
+        <br>
+        <label>Välj tid att hyra *</label><br>
+        <select>
+            <option>Välj tid att hyra:</option>
+            <option>08:00-10:00</option>
+            <option>10:00-12:00</option>
+            <option>12:00-14:00</option>
+            <option>14:00-16:00</option>
+            <option>16:00-18:00</option>
+            <option>18:00-20:00</option>
+            <option>20:00-23:00</option>
+        </select><br>
+        <label for="">Är det något du undrar över eller har något speciellt önskemål om, kan du skriva det här.</label> <br>
+        <textarea name="tillstand" id="textarea" placeholder="Skriv något.." style="height:100px"></textarea><br>
+        <p id="pFormularK">* Obligatoriskt att svara</p>
+        <button class="btn3">Skicka</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footerlank">
+        <h3 class="h3footer">Länkar</h3>
+        <a href="kultur.html">Fritid & Kultur</a>
+            <a href="ledigajobbstart.html">Lediga Jobb</a>
+            <a href="barn.html">Barn & Utbildning</a>
+            <a href="naringsliv.html">Näringsliv</a>
+            <a href="politik.html">Kommun & Politik</a>
+    </div>
+    <div class="footerkontakt">
+        <h3 class="h3footer">
+            Kontakta oss
+        </h3>
+        <p>
+            Adress: We7gatan 1
+        </p>
+        <p>
+            E-post: we7@kommun.se
+        </p>
+        <p>
+            Nummer: 070-100000
+        </p>
+        <p>
+            Öppettider växel: Måndag - Fredag: 09:00-16:00
+        </p>
+        <p>
+            Organisationsnummer: 0000000000
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+:root{
+    --menu-count: 7;
+}
+
+.bozzy{
+    background-color: azure;
+}
+
+.mobile-menu-btn{
+    display: none;
+}
+
+.header-main{
+    width: 100%;
+    padding: 0 60px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+
+.header-main nav{
+    display: flex;
+
+}
+
+.header-main .logo{
+    height: 40px;
+    width: fit-content;
+    align-self: center;
+    cursor: pointer;
+}
+.header-main .logo img{
+    height: 100%;
+
+}
+.header-main ul{
+    height: 100%;
+    padding-left: 40px;
+    list-style: none;
+    display: flex;
+    align-self: center;
+}
+
+.header-main ul li{ 
+    position: relative;
+}
+
+
+.header-main ul li a{
+    display: block;
+    padding: 0 10px;
+    height: 100%;
+    line-height: 60px;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease-in-out 100ms;
+}
+
+
+.header-main ul li a:hover{
+    background-color: #2a2a2a;
+    color: white;
+}
+
+
+/* DROPDOWN STYLE STARTAR HÄR */
+
+.header-main ul li ul{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    position: absolute;
+    left: -40px;
+    transition: all ease-in-out 100ms;
+}
+
+.header-main ul li ul li a{
+    white-space: nowrap;
+}
+
+ul li:hover>ul{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+/* DROPDOWN SLUTAR HÄR */
+
+
+.header-main .sm{
+    height: 60px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.header-main .sm a{
+    display: block;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.header-main .sm img{
+    height: 100%;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px){
+
+    .header-main{ 
+        display: none;
+    }
+    .mobile-menu-btn{
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 200;
+        background: white;
+    }
+    .mobile-menu-btn img{
+        height: 80%;
+        align-self: center;
+    }
+    .header-main{
+        height: 100vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0;
+        justify-content: flex-start;
+    }
+    .header-main nav{
+        width: 100%;
+        height: 80vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: stretch;
+    }
+    .header-main .logo{
+        height: 30%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .header-main .logo img{
+        height: 60%;
+        align-self: center;
+    }
+    .header-main ul{
+        height: 70%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .header-main ul li{
+        width: 100%;
+        height: calc(100% / var(--menu-count));
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid #ddd;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        transition: all ease-in-out 100ms;
+    }
+    .header-main ul li:nth-last-child(1) {
+        border-bottom: 1px solid #ddd;
+    }
+    .header-main ul li a{
+        width: 100%;
+        height: fit-content;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 15px;
+    }
+    .header-main ul li a:hover {
+        background-color: transparent;
+        color: #111;
+    }
+    .header-main nav{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .header-main ul li ul{
+        display: none;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+    }
+    .header-main ul li ul li{
+        height: fit-content;
+        display: block;
+        background-color: #111;
+    }
+    .header-main ul li ul li a{
+        background-color: #111;
+        color: white;
+    }
+    .header-main ul li ul li a:hover{
+        background-color: #111;
+        color: white;
+    }
+    
+    .header-main ul li:focus>ul,
+    .header-main ul li:hover>ul{
+        display: flex;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .header-main .sm{
+        height: 20%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .header-main .sm a{
+        height: 60%;
+        margin: 0 2%;
+        padding: 0;
+    }
+
+}
+
+/* Start - bibliotek */
+
+
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(58, 56, 56, 0.7),rgba(43, 41, 41, 0.7)), url(imagees/books-2463779_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.rowy{
+    display: flex;
+    flex-wrap: wrap;
+    height: 60%;
+    left: 5%;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+}
+.coly{
+    flex-basis: 50%;
+}
+
+.h1-c{
+    top: 20%;
+    color: white;
+    font-size: clamp(1.875rem, 1.1694rem + 3.2258vw, 3.75rem);
+    overflow-x: hidden;
+}
+
+.p-c{
+    color: white;
+    font-size: clamp(0.9375rem, 0.7813rem + 25vw, 1.25rem);
+    overflow-x: hidden;
+}
+
+
+.card{
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 500px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 50px 35px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    
+}
+
+h5{
+    color: white;
+    text-shadow: 0 0 5px #999;
+    font-size: 25px;
+}
+.biggie{
+    color: white;
+    text-shadow: 0 0 5px #999;
+    font-size: 25px;
+}
+
+.h-dark{
+    color: black;
+    text-shadow: 0 0 5px #999;
+    font-size: 25px;
+}
+
+.card1{
+    background-image: url(imagees/Harry-Potter-25-Year.jpg);
+    
+}
+.card2{
+    background-image: url(imagees/nightingale.jpg);
+}
+.card3{
+    background-image: url(imagees/revolutionary-spring.jpg);
+}
+.card4{
+    background-image: url(imagees/savannah.jpg);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+@media (max-width: 600px){
+    .card{
+    width: 100%;
+    max-height: 400px;
+    max-width: 300px;
+}   
+    .coly img{
+    max-width: 100%;
+
+}
+    .rowy{
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+}

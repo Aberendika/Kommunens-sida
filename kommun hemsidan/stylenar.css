@@ -1,0 +1,186 @@
+@import url(footer.css);
+@import url(meny.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+/* Bild för rubriken */
+.business {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(img/business.jpg);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+}
+
+/* Näringsliv startsida */
+
+section {
+    padding: 20px;
+}
+
+#h1article {
+    font-size: clamp(1.875rem, 1.1694rem + 3.2258vw, 3.75rem);
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.h2section {
+    font-size: clamp(1.5625rem, 1.2097rem + 1.6129vw, 2.5rem);
+    margin-top: 20px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.psection {
+    margin-top: 20px;
+    font-size: clamp(0.75rem, 0.4442rem + 1.3978vw, 1.5625rem);
+}
+
+.hr1 {
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.ulsection {
+    list-style-type: none;
+    margin-top: 30px;
+    font-size: clamp(0.9375rem, 0.5847rem + 1.6129vw, 1.875rem);
+}
+
+.ulsection .lisection .asection{
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+}
+
+.ulsection .lisection .asection:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+/* Näringslivs information sida */
+
+.info {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(img/info.jpg);
+    width: 100%;
+    height: 50vh;
+    background-size: contain;
+}
+
+#h1info {
+    font-size: clamp(1.875rem, 1.1694rem + 3.2258vw, 3.75rem);
+    position:absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#h3info {
+    font-size: clamp(0.9375rem, 0.5847rem + 1.6129vw, 1.875rem);
+    font-weight: lighter;
+}
+
+#h4info {
+    font-size: clamp(0.9375rem, 0.5847rem + 1.6129vw, 1.875rem);
+}
+
+.pInfo {
+    font-size: clamp(0.75rem, 0.4442rem + 1.3978vw, 1.5625rem);
+}
+
+.aInfo {
+    text-decoration: underline;
+    color: black;
+    font-size: clamp(0.9375rem, 0.5847rem + 1.6129vw, 1.875rem);
+}
+
+.aInfo:hover {
+   font-weight: bolder;
+    
+}
+
+#asideInfo {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#h1aside {
+    font-size: clamp(0.9375rem, 0.5847rem + 1.6129vw, 1.875rem);
+    margin-top: 20px;
+}
+
+.btn1 {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+    background: #FFF;
+    border: 1px solid #D5D9D9;
+    font-size: clamp(0.8125rem, 0.5302rem + 1.2903vw, 1.5625rem);
+    height: 31px;
+    padding: 0 11px;
+    text-align: center;
+    font-weight: 400;
+    color: #0F1111;
+    margin-top: 15px;
+}
+
+.btn1:hover{
+    background-color: #F7FAFA;
+    border-color: #D5D9D9;
+}
+
+/* Näringslivs tillstånd sida */
+
+.tillstand {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(img/tillstånd.jpg);
+    width: 100%;
+    height: 50vh;
+    background-size: contain;
+}
+
+#h1tillstand {
+    font-size: clamp(1.875rem, 1.1694rem + 3.2258vw, 3.75rem);
+    position:absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.formular {
+    margin: 20px 0;
+    text-align: center;
+}
+
+label {
+    font-size: clamp(1.125rem, 0.8427rem + 1.2903vw, 1.875rem);
+}
+
+input, select, textarea {
+    width: 40%;
+    height: 30px;
+    margin-top: 10px;
+    font-size: clamp(0.8125rem, 0.6478rem + 0.7527vw, 1.25rem);
+    padding-left: 5px;
+}
+
+#pFormular {
+    font-size: clamp(0.8125rem, 0.6478rem + 0.7527vw, 1.25rem);
+    margin: 8px 0;
+}
+
+@media (max-width: 700px) {
+    input, select, textarea {
+        width: 70%;
+    }
+}

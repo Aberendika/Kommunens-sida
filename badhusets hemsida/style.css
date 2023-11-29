@@ -1,0 +1,910 @@
+*{
+    margin:  0;
+    padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+header {
+  background-color: #89CFF0;
+}
+
+.logo {
+  width: 150px;
+  height: 70px;
+}
+
+
+.active {
+    background-color: #acddf8;
+    font-style: bold;
+}
+
+/* Meny */
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  font-size: 20px;
+  background-color: #89CFF0;
+}
+
+li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: white;
+    color: black;
+  }
+
+@media(max-width:991px){
+.col{
+      width: 100%;
+  }
+  .card{
+    max-width: 300px;
+    max-height: 500px;
+  }
+  .card{
+    max-width: 100%;
+  }
+  .row{
+    max-width: 100%;
+}
+
+
+/* Body färg */
+body {
+    background-color: #e6f5fd;
+  }
+
+}
+
+/* Hem */
+
+/* Container för viktigt meddelandet */
+
+.modal-container {
+    margin: 60px auto;
+    padding-top: 0px;
+    position: relative;
+    width: 160px;
+  }
+  .modal-container .modal-btn {
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    background: #446CB3;
+    font-size: 22px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 5px 5px -5px #333;
+    transition: background 0.3s ease-in;
+  }
+  .modal-container .modal-btn:hover {
+    background: #365690;
+  }
+  .modal-container .modal-content,
+  .modal-container .modal-backdrop {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+  }
+  .modal-container .modal-close {
+    color: #aaa;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding-top: 3px;
+    background: #fff;
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+  .modal-container .modal-close:hover {
+    color: #333;
+  }
+  .modal-container .modal-content-btn {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    bottom: 20px;
+    right: 30px;
+    background: #446CB3;
+    color: #fff;
+    width: 50px;
+    border-radius: 2px;
+    font-size: 14px;
+    height: 32px;
+    padding-top: 9px;
+    font-weight: normal;
+  }
+  .modal-container .modal-content-btn:hover {
+    color: #fff;
+    background: #365690;
+  }
+  .modal-container #modal-toggle {
+    display: none;
+  }
+  .modal-container #modal-toggle.active ~ .modal-backdrop, .modal-container #modal-toggle:checked ~ .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+  }
+  .modal-container #modal-toggle.active ~ .modal-content, .modal-container #modal-toggle:checked ~ .modal-content {
+    opacity: 1;
+    background-color: #fff;
+    max-width: 400px;
+    width: 400px;
+    height: 380px;
+    padding: 10px 30px;
+    position: fixed;
+    left: calc(50% - 200px);
+    top: 12%;
+    border-radius: 4px;
+    z-index: 999;
+    pointer-events: auto;
+    cursor: auto;
+    visibility: visible;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.6);
+  }
+  @media (max-width: 400px) {
+    .modal-container #modal-toggle.active ~ .modal-content, .modal-container #modal-toggle:checked ~ .modal-content {
+      left: 0;
+      width: 80%;
+      height: 400px;
+    }
+  }
+
+#h1hem {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+  text-decoration: under;
+}
+hr {
+  margin-top: 10px;
+  border: 2px solid #89CFF0;
+}
+
+#h2hem {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+  text-decoration: underline;
+}
+ 
+#phem {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.row{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    height: 100%;
+    align-items: center;
+   
+}
+
+.col{
+    flex-basis: 0%;
+}
+
+.card{
+   
+    top: 0%;
+    left: 0%;
+    width: 1500px;
+    height: 1000px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card1{
+    background-image: url(img/jvr-x-88-kOEcbgfNLXI-unsplash.jpg);
+}
+.card2{
+    background-image: url(img/cor-dulce-lMMas1V5Z3w-unsplash.jpg);
+}
+.card3{
+    background-image: url(img/swim-619074_1280.jpg)
+}
+.card4{
+    background-image: url(img/girls-1284419_1280.jpg);
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.h5txt{
+    font-size: clamp(1.875rem, 1.1694rem + 3.2258vw, 3.75rem);
+    color: white;
+    text-shadow: 0 0 5px #999;
+    text-align: center;
+    width: 100%  
+}
+.pcard{
+    color: white;
+    font-size: clamp(1.875rem, 1.1694rem + 3.2258vw, 3.75rem);
+   
+}
+
+.card p{
+    text-shadow: 0 0 15px #000;
+    font-size: clamp(1.875rem, 1.1694rem + 3.2258vw, 3.75rem);
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background-color: #89CFF0;
+    margin-top: 10%;
+    text-align: center;
+  }
+  
+  .h3footer {
+    font-size: 33px;
+  }
+  
+  .pfooter {
+    margin-top: 5px;
+    font-size: 20px
+  }
+  
+  .footertider {
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .footertider:hover {
+    text-decoration: underline;
+    color: black;
+  }
+
+  /* Visar vilken margin article ska ha */
+article {
+    margin-top: 20px;
+    margin: 20px;
+  }
+
+  /* Priser */
+
+.rubrik {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  
+  .h3pris {
+    margin-top: 30px;
+    font-size: 30px;
+  }
+  
+  .textbox {
+    flex-basis: 35%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(img/bild.jpg);
+    background-size: cover;
+    margin-bottom: 1%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    width: 80%;
+    margin-left: 10%;
+    color: white;
+  }
+  
+  .textbox:hover {
+    box-shadow: 0 0 15px 0px black;
+  }
+  
+  .hrpris {
+    margin-top: 10px;
+    border: 1px solid black;
+  }
+  
+  .paragrafpris {
+    margin-top: 20px;
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  /* Öppettider */
+
+#ptider {
+    margin-top: 20px;
+    margin: 20px;
+    font-size: 30px;
+  }
+
+  #plast {
+    font-size: clamp(1.25rem, 1.0148rem + 1.0753vw, 1.875rem);
+    color: red;
+    text-align: center;
+  }
+
+  
+
+/* Media query */
+
+@media (max-width: 991px) {
+    #ptider {
+      font-size: 15px;
+    }
+    .rubrik {
+      font-size: 25px;
+    }
+    #h1hem {
+      font-size: 30px;
+    }
+    .h3footer {
+      font-size: 13px;
+    }
+    .pfooter {
+      font-size: 12px;
+    }
+    .footertider {
+      font-size: 12px;
+    }
+    ul {
+      font-size: 18px;
+    }
+    li {
+      float: none;
+    }
+    .logo {
+      width: 100px;
+      height: 50px;
+    }
+    .h3pris {
+      font-size: 22px;
+    }
+    .paragrafpris {
+      font-size: 15px;
+    }
+  }
+
+  /* Kontakt */
+
+  .body, html{
+    overflow-x:hidden;
+}
+
+
+  .contactUs
+{
+position: relative;
+width: 92%;
+padding: 20px 100px;
+}
+
+.contactUs .title
+{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2em;
+}
+.contactUs .title h2
+{
+color: black;
+font-weight: 500;
+margin-bottom: 15px;
+overflow-x: hidden;
+
+}
+.form{
+    grid-area: form;
+}
+.info{
+    grid-area: info;
+}
+.map{
+    grid-area: map;
+}
+.contact{
+  padding: 40px;
+  background: #e6f5fd;
+  box-shadow: 0 5px 35px rgba(0,0,0,0.15);
+  
+}
+.box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form info"
+    "form map";
+    grid-gap: 20px;
+    
+}
+.contact h3{
+        color: black;
+        font-weight: 500;
+        font-size: 1.4em;
+        margin-bottom: 10px;
+}
+
+.formBox{
+    position: relative;
+    gap: 20px;
+}
+.formBox .row50{
+    display: flex;
+    gap: 20px;
+}
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.formBox .row100 .inputBox{
+    width: 100%;
+
+}
+
+.inputBox span{
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+} 
+.inputBox input{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+
+}
+.inputBox textarea{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;
+}
+
+.inputBox input[type="submit"]{
+    background: #e6f5fd;
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px;
+}
+
+.inputBox ::placeholder{
+    color: #999;
+}
+
+.info{
+    background: #e6f5fd;
+
+}
+.info h3{
+    color: black;
+}
+.info .infoBox div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info .infoBox div span{
+    min-width: 40px;
+    height: 40px;
+    color: black;
+    background: #89CFF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-top: 15px;
+
+}
+
+.info .infoBox div p{
+    color: black;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.info .infoBox div a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.sci{
+    margin-top: 40px;
+    display: flex;
+        background: #e6f5fd;
+
+
+}
+.sci li{
+    list-style: none;
+    margin-right: 15px;
+}
+.sci li a{
+    color: #e6f5fd;
+    font-size: 2em;
+    color: black;
+}
+
+
+.map{
+    padding: 0;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+/* Simskola anmälan */
+
+.anmalanmain {
+    width: 92%;
+}
+
+.anmälan
+{
+position: left;
+width: 100%;
+padding: 40px 100px;
+}
+
+.anmälan .title
+{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2em;
+}
+.anmälan .title h2
+{
+color: black;
+font-weight: 500;
+margin-top: 15px;
+}
+h1{
+    font-weight: 400;
+    line-height: 1.2;
+}
+p{
+    font-size: 1.125rem;
+}
+h1,p{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+label{
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+input,button,select,textarea{
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.container{
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+    padding:1.8rem 1rem;
+}
+
+.header{
+    padding: 0 0.625rem;
+    margin-bottom: 1.875rem;
+    text-align: center;
+}
+#description{
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+
+}
+
+#nivå{
+    color: black; 
+    font-size: 1.5rem;
+}
+form{
+    background: var(--color-darkblue-alpha);
+    border-radius: 0.25rem;
+}
+
+
+
+.form-group{
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+}
+.formControl{
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+.formControl:focus{
+    border-color:blue;
+    outline: 0;
+    box-shadow:0 0 0 0.2rem rgba(0,123,255,0.25)
+}
+.inputRadio,
+.checkbox
+{
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+
+}
+.textarea{
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.15rem;
+    outline: none;
+    border-color: blue;
+    border-radius: 5px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.formBox .row100 .inputBox{
+    width: 100%;
+
+}
+
+.inputBox span{
+    color: #89CFF0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+} 
+.inputBox input{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+
+}
+.inputBox textarea{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;
+}
+
+.inputBox input[type="submit"]{
+    background: #89CFF0;
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px;
+    
+}
+
+  /* Simskola */
+
+  header section{
+    background-image:url(img/poolbottom.jpg);
+    background-repeat: no-repeat;
+    background-position:bottom;
+    background-size: cover;
+    padding: 20px;
+    font-style: bold;
+    opacity: 80%;
+    font-size: 20px;
+}
+picture{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;     
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+picture img{
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.mainskola{
+    display: flex;
+    justify-content: center;
+    background-color: #e6f5fd;
+}
+table, .info, button{
+    display: inline-block;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+tr:nth-of-type(odd) { 
+    background: #e6f5fd; 
+}
+th { 
+    background:#89CFF0; 
+    color: black; 
+    font-weight: bold; 
+}
+td, th { 
+    padding: 6px; 
+    border: 1px solid black; 
+    text-align: left; 
+}
+
+button{
+    padding: 5px;
+    font-weight: bold;
+    background-color: #acddf8;
+}
+.info{
+    border: black;
+    border-style: solid;
+}
+.info p, h4{
+    padding: 10px;
+}
+
+.footer {
+    background-color: #89CFF0;
+    margin-top: 10%;
+    text-align: center;
+}
+  
+.h3footer {
+    font-size: 33px;
+}
+  
+.pfooter {
+    margin-top: 5px;
+    font-size: 20px
+}
+  
+.footertider {
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 760px) { 
+
+ul {
+    display:flex; 
+    flex-direction :column;
+    align-items :center; 
+}
+ 
+li {
+    float:none; 
+}
+ 
+picture{
+    flex-direction :column; 
+    align-items: center;
+}
+
+#kidunderwater{
+    display: none;
+}
+ 
+main{   
+    flex-direction :column; 
+}
+
+button, .info{
+    display:flex; 
+    flex-direction :column; 
+    justify-content: center;
+}
+table, thead, tbody, th, td, tr { 
+	display: block; 
+}	
+thead tr { 
+	position: absolute;
+    text-align: center;
+    top: -9999px;
+	left: -9999px;
+}
+	
+tr { border: 1px solid #ccc; }
+	
+td { 
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+}
+	
+
+td:before { 
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 45%; 
+	padding-right: 10px; 
+    white-space: nowrap;
+}
+
+td:nth-of-type(1):before { content: "Nivå"; }
+	td:nth-of-type(2):before { content: "Förkunskaper"; }
+	td:nth-of-type(3):before { content: "Mål"; }
+	td:nth-of-type(4):before { content: "Pris"; }
+}

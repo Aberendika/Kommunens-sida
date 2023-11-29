@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ansok.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ANSÖK HÄR</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<section class="header-main">
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="we7 logo">
+        </a>
+        <ul>
+            <li>
+                <a href="index.html">Hem</a>
+            </li>
+            <li>
+                <a href="kultur.html">Fritid & Kultur</a>
+                <ul>
+                    <li>
+                        <a href="leder.html">Vandringsleder</a>
+                    </li>
+
+                    <li>
+                        <a href="bibliotek.html">Bibliotek</a>
+                    </li>
+
+                    <li>
+                        <a href="idrott.html">Idrottsplatser</a>
+                    </li>
+
+                    <li>
+                        <a href="forening.html">Föreningsverksamheter</a>
+                    </li>
+
+                    <li>
+                        <a href="formularkultur.html">Hyra idrottsplats</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="ledigajobbstart.html">Lediga Jobb</a>
+            </li>
+            <li>
+                <a href="barn.html">Barn & Utbildning</a>
+                <ul>
+                    <li>
+                        <a href="forskolor.html">Förskola och Pedagogisk Omsorg</a>
+                    </li>
+                    <li>
+                        <a href="grundskola.html">Grundskola och Fritidshem</a>
+                    </li>
+                    <li>
+                        <a href="gymnasium.html">Gymnasieskola</a>
+                    </li>
+                    <li>
+                        <a href="kulturskola.html">Kulturskola</a>
+                    </li>
+                    <li>
+                        <a href="yrkes.html">Yrkeshögskola</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="naringsliv.html">Näringsliv</a>
+            <ul>
+                <li>
+                    <a href="info.html">Information om att starta företag</a>
+                </li>
+                <li>
+                    <a href="tillstand.html">Sök tillstånd</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="politik.html">Kommun & Politik</a>
+            <ul>
+                <li>
+                    <a href="kommun.html">Förvaltningar</a>
+                </li>
+                <li>
+                    <a href="kontakt.html">Kontaktlistor till skolor och verksamheter</a>
+                </li>
+                <li>
+                    <a href="Kommunstyrelsen.html">Kommunstyrelsen</a>
+                </li>
+            </ul>
+        </li>
+        </ul>
+    </nav>
+    <div class="sm">
+        <a href="/badhusets hemsida/index.html"><img src="image/swimming.png" alt="Aqua Parks link"></a>
+        <a href="/Fritidshem/index.html"><img src="image/game-pad.png" alt="Fritidshem link"></a>
+    </div>
+</section>
+<article id="header2">
+    <h1 class="rubrik">Arbeta hos oss</h1>
+</article>
+<body>
+    <hr>
+    <main>
+        <div class="mobile-menu-btn">
+            <img src="image/burger-bar.png" alt="mobile-menu-btn" onclick="openMenu()">
+        </div>
+        <aside>
+            <nav class="dropdown">
+                <button class="dropbtn"> <a href="ledigajobbstart.html">Arbeta hos oss</a></button>
+                <article class="dropdown-content">  
+                    <a href="anonser.html">Lediga jobb</a>
+                    <a href="ansok.html">Ansök</a>
+                    <a href="#kontakt">Kontakt vid problem att söka lediga jobb</a>
+                </article>
+            </nav>
+        </aside>
+        <section class="formulär">
+                <h2 id="ansokidag" class="rubrik">Ansök till jobbet här!</h2>
+                    <form class=ansokan action="" method="post">
+                        <label for="add">Annons</label>
+                        <select name="add" id="add">
+                                <option value="-1">--Vilken vilket jobb söker du?--</option>
+                                <option value="1">Grundskolelärare i SO- ämnena</option>
+                                <option value="2">Skolsköterska på grundskola</option>
+                                <option value="3">Lokalvårdare på Aqua Park</option>
+                                <option value="4">Personlig assistent</option>
+                                <option value="4">Spontanansökan</option>
+                        </select>
+                            <label for="firstname">Förnamn:</label>
+                            <input type="text" name="firstname" id="firstname"/>
+                            <label for="lastname">Efternamn:</label>
+                            <input type="text" name="lastname" id="lastname"/>
+                            <label for="mailadress">Mailadress:</label>
+                            <input type="text" name="mailadress" id="mailadress"/>
+                            <label for="phonenumber">Telefonummer:</label>
+                            <input type="number" name="phonenumber" id="phonenumber"/>
+                            <textarea>Skriv en kort beskrivning om dig själv:</textarea>
+                    </form>
+                    <form class=ansoka action="/action_page.php">
+                        <input type="file" id="myFile" name="filename">
+                        <button type="submit">Skicka ansökan</button>
+                    </form>
+         </section>
+    </main>
+        <section id="kontakt">
+            <h3 id="rubrik">Har du frågor?</h3>
+        </section>
+        <section class="hardufragor">
+            <article class="kontaktuppgift">
+            <p> Sanna Björnlund, HR </p>
+            <p> E:post: sanna.bjornlund@we7.se </p>
+            <p> Telefon: 053- 000 00 00</p>
+        </article>
+        <article>
+            <img class="kontaktbild" src="image/women.jpg" alt="kvinna" width="250px">
+        </article>
+        </section>
+</body>
+<script src="script.js" type="text/javascript"></script>
+</html>
